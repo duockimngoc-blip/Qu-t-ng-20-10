@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gửi em yêu – 20/10 ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,sans-serif;color:#fff6f7;background:radial-gradient(circle at top,#a82f52,#3b0b22 70%);overflow-x:hidden}
+main{max-width:760px;margin:auto;padding:28px 18px 50px;text-align:center;position:relative;z-index:1}
+h1{font-family:Georgia,serif;font-size:clamp(2rem,7vw,3.5rem);line-height:1.15;color:#ffe2a5;text-shadow:0 0 20px #ff7b9c;margin:24px 0 10px}
+.subtitle{font-size:1.1rem;opacity:.95}.rose{font-size:3.5rem;filter:drop-shadow(0 0 12px #ff8aa9);margin:10px}
+.card{margin:25px auto;padding:26px 20px;border:1px solid #ffd7a1;border-radius:28px;background:rgba(255,245,247,.10);box-shadow:0 15px 45px #18000c80;backdrop-filter:blur(8px)}
+.message{font-family:Georgia,serif;font-size:clamp(1.35rem,4.5vw,2rem);line-height:1.55}
+button{border:0;border-radius:999px;background:linear-gradient(90deg,#ffb4c8,#ffe2a5);color:#67152f;padding:14px 24px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 5px 20px #ff8ba755}
+.player{margin:22px auto 0;max-width:560px;overflow:hidden;border-radius:16px}
+.note{font-size:.9rem;opacity:.8;margin-top:18px}
+.floating{position:fixed;bottom:-50px;pointer-events:none;animation:floatUp linear forwards;z-index:0}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(30deg);opacity:0}}
+.glow{animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{50%{text-shadow:0 0 25px #ffb6c9}}
+footer{opacity:.75;font-size:.85rem;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+  <div class="rose">🌹💗🌹</div>
+  <h1 class="glow">Chúc em 20/10 vui vẻ</h1>
+  <p class="subtitle">Một món quà nhỏ, dành riêng cho người anh yêu ❤️</p>
+  <section class="card">
+    <div class="message">Chúc em 20/10 vui vẻ,<br><strong>anh yêu em ❤️</strong></div>
+    <p>Em là điều dịu dàng và đặc biệt trong cuộc đời anh.</p>
+    <button id="openBtn">💝 Mở món quà tình yêu</button>
+    <div id="musicArea" hidden>
+      <p><strong>🎵 Hơn Cả Yêu – Đức Phúc</strong></p>
+      <div class="player">
+        <iframe id="yt" width="100%" height="250"
+          src="https://www.youtube-nocookie.com/embed/__kGJZ-kPno?rel=0"
+          title="Hơn Cả Yêu – Đức Phúc" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>Nhấn nút phát trong video để nghe nhạc nhé 💕</p>
+    </div>
+  </section>
+  <div class="rose">🌷✨💖✨🌷</div>
+  <footer>Made with love • 20/10</footer>
+</main>
+<script>
+const btn=document.getElementById('openBtn'), area=document.getElementById('musicArea');
+btn.addEventListener('click',()=>{area.hidden=false;btn.textContent='💖 Món quà dành riêng cho em';burst();});
+function heart(){const e=document.createElement('div');e.className='floating';e.textContent=['💗','💖','🌹','✨','💕'][Math.floor(Math.random()*5)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(18+Math.random()*24)+'px';e.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),10500)}
+function burst(){for(let i=0;i<24;i++)setTimeout(heart,i*90)}
+setInterval(heart,650);
+</script>
+</body></html>
